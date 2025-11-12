@@ -1,0 +1,26 @@
+meta {
+  name: Add product
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{API_BASE_URL}}/product
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Bata",
+    "description": "Footwear for the comfort of feet",
+    "price": 500,
+    "total_quantity": 10,
+    "available_quantity": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

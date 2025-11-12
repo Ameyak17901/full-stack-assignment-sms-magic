@@ -1,0 +1,22 @@
+meta {
+  name: Restock product quantity
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{API_BASE_URL}}/restock/update/5
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "restock_quantity": 5
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
